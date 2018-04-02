@@ -1,0 +1,17 @@
+<resources>
+
+    <style name="Theme.PopularMovies" parent="Base.Theme.PopularMovies" />
+
+    <!-- Base application theme. -->
+    <style name="Base.Theme.PopularMovies" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:homeAsUpIndicator">@drawable/ic_arrow_back_white</item>
+    </style>
+
+    <style name="Theme.PopularMovies.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>

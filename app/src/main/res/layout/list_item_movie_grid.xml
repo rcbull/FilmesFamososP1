@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable name="movie"
+            type="br.com.rcbull.filmesfamosos.models.Movie"/>
+    </data>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardUseCompatPadding="true">
+
+        <android.support.constraint.ConstraintLayout
+            android:minWidth="250dp"
+            android:layout_width="match_parent"
+            android:layout_height="250dp">
+
+            <ImageView
+                android:id="@+id/movie_poster_imageview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/label_movie_poster" />
+
+            <View
+                android:id="@+id/title_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary"
+                android:alpha="0.35"/>
+
+            <TextView
+                android:id="@+id/title_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="@string/placeholder_title"
+                android:textColor="@color/defaultTextColor"
+                android:textSize="18sp"/>
+
+            <ImageView
+                android:id="@+id/vote_average_icon"
+                android:layout_width="16sp"
+                android:layout_height="16sp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintTop_toBottomOf="@id/title_textview"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/ic_star_accent"
+                android:contentDescription="@string/label_movie_average_vote" />
+
+            <TextView
+                android:id="@+id/vote_average_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                app:layout_constraintStart_toEndOf="@id/vote_average_icon"
+                app:layout_constraintTop_toTopOf="@id/vote_average_icon"
+                app:layout_constraintBottom_toBottomOf="@id/vote_average_icon"
+                tools:text="@string/placeholder_vote_average"
+                style="@style/TextAppearance.AppCompat.Caption"
+                android:textColor="@color/defaultTextColor"
+                android:textSize="12sp"
+                android:textStyle="italic" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+</layout>

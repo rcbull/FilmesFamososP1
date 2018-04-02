@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Popular Movies</string>
+    <string name="title_popular_movies">Popular Movies</string>
+    <string name="title_top_rated_movies">Top Rated Movies</string>
+    <string name="label_movie_poster">Movie poster</string>
+    <string name="label_movie_average_vote">Average vote</string>
+
+    <string name="average_vote">%1$s/10</string>
+    <string name="placeholder_vote_average">5.0/5.0</string>
+    <string name="placeholder_title">Movie title</string>
+    <string name="placeholder_date">Date</string>
+    <string name="error_no_internet">Limited access! Please verify your access</string>
+    <string name="retry">Retry</string>
+</resources>
