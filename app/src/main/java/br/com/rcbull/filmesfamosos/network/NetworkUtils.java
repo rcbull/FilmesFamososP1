@@ -22,9 +22,9 @@ public class NetworkUtils {
 
     private static final String API_KEY = "";
 
-    private static final String URL_POPULAR_MOVIE = "https://api.themoviedb.org/3/movie/popular?api_key=" +
+    private static final String FILTER_POPULAR_MOVIE = "https://api.themoviedb.org/3/movie/popular?api_key=" +
             API_KEY;
-    private static final String URL_TOP_RATED_MOVIE = "https://api.themoviedb.org/3/movie/top_rated?api_key=" +
+    private static final String FILTER_TOP_RATED_MOVIE = "https://api.themoviedb.org/3/movie/top_rated?api_key=" +
             API_KEY;
 
     public static URL getMoviesUrl(boolean popular, int page) {
@@ -32,10 +32,10 @@ public class NetworkUtils {
             URL url;
             if (popular)
                 // query popular movies
-                url = new URL(URL_POPULAR_MOVIE + "&page=" + String.valueOf(page));
+                url = new URL(FILTER_POPULAR_MOVIE + "&page=" + String.valueOf(page));
             else
                 // query top rated movies
-                url = new URL(URL_TOP_RATED_MOVIE + "&page=" + String.valueOf(page));
+                url = new URL(FILTER_TOP_RATED_MOVIE + "&page=" + String.valueOf(page));
 
             return url;
         } catch (Exception e) {
